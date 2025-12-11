@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detecto – Analyse des biais journalistiques d’un article</title>
+  <meta name="description" content="Detecto analyse automatiquement les biais dans un article journalistique : biais politiques, émotionnels, idéologiques, mots connotés, frames, sources et score de neutralité." />
+  <meta name="keywords" content="journalisme, biais, analyse d'article, neutralité, Detecto, intelligence artificielle, IA, vérification" />
+  <meta name="author" content="Detecto" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Landing page -->
+  <section class="landing">
+    <div class="container">
+      <header>
+        <img src="logo.png" alt="Logo Detecto" class="logo" />
+        <h1>Detecto</h1>
+        <p>Détectez les biais journalistiques d’un article en un clic</p>
+      </header>
+
+      <div class="intro">
+        <p>Detecto analyse un article pour identifier :</p>
+        <ul>
+          <li>Biais politiques, émotionnels et idéologiques</li>
+          <li>Mots et tournures connotés</li>
+          <li>Sources citées et leur orientation</li>
+          <li>Frames (thèmes : sécurité, compassion, morale, etc.)</li>
+          <li>Style d’écriture et score de neutralité</li>
+        </ul>
+      </div>
+
+      <button id="startBtn" class="btn-primary">Commencer l’analyse</button>
+    </div>
+  </section>
+
+  <!-- Zone d’analyse -->
+  <section id="analysis" class="analysis hidden">
+    <div class="container">
+      <header>
+        <h1>Detecto</h1>
+        <p>Analyse des biais journalistiques</p>
+      </header>
+
+      <div class="input-section">
+        <textarea id="inputText" rows="10" placeholder="Collez votre article ici..."></textarea>
+        <button id="analyzeBtn" class="btn-primary">Analyser</button>
+        <div id="loading" class="hidden">
+          <div class="loader"></div>
+          Analyse en cours...
+        </div>
+      </div>
+
+      <section id="results" class="hidden">
+        <div class="result-card fade-in">
+          <h2>Score de neutralité : <span id="neutralityScore">-</span></h2>
+          
+          <div class="result-block">
+            <h3>Biais détectés</h3>
+            <ul id="biasList"></ul>
+          </div>
+          
+          <div class="result-block">
+            <h3>Mots et tournures connotés</h3>
+            <ul id="connotationList"></ul>
+          </div>
+          
+          <div class="result-block">
+            <h3>Sources et orientation</h3>
+            <ul id="sourceList"></ul>
+          </div>
+          
+          <div class="result-block">
+            <h3>Frames (thèmes)</h3>
+            <ul id="frameList"></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Detecto</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
